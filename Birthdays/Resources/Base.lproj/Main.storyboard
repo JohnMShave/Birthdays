@@ -17,33 +17,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlo-fk-dQW" userLabel="Birthdays">
-                                <rect key="frame" x="170.5" y="44" width="73" height="21"/>
+                                <rect key="frame" x="171" y="44" width="72.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-pL-ct5">
-                                <rect key="frame" x="0.0" y="65" width="414" height="797"/>
+                                <rect key="frame" x="0.0" y="64.5" width="414" height="797.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BirthdayCell" id="7W1-pU-ntS" customClass="BirthdayCell" customModule="Birthdays" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="67.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7W1-pU-ntS" id="ipF-qi-pFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-fv-DxY">
-                                                    <rect key="frame" x="165" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-fv-DxY" userLabel="Initials Label">
+                                                    <rect key="frame" x="14" y="14.5" width="38" height="38.5"/>
+                                                    <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="38" id="Kjz-Gn-Eua"/>
+                                                        <constraint firstAttribute="height" constant="38" id="feD-A9-Z8h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="41.5" placeholderIntrinsicHeight="38" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4c0-XL-4JJ">
+                                                    <rect key="frame" x="64" y="13.5" width="69.5" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="John Shave" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-NO-vWg" userLabel="Name Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="69.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="John Shave" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHn-tn-ro4" userLabel="DOB">
+                                                            <rect key="frame" x="0.0" y="14.5" width="69.5" height="26.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4c0-XL-4JJ" firstAttribute="centerY" secondItem="H7Q-fv-DxY" secondAttribute="centerY" id="Eb8-NA-xII"/>
+                                                <constraint firstItem="4c0-XL-4JJ" firstAttribute="leading" secondItem="H7Q-fv-DxY" secondAttribute="trailing" constant="12" id="RCY-qW-c37"/>
+                                                <constraint firstItem="H7Q-fv-DxY" firstAttribute="leading" secondItem="ipF-qi-pFl" secondAttribute="leading" constant="14" id="XzN-Vf-40c"/>
+                                                <constraint firstItem="H7Q-fv-DxY" firstAttribute="top" secondItem="ipF-qi-pFl" secondAttribute="top" constant="14.5" id="gDq-E6-n57"/>
+                                                <constraint firstAttribute="bottom" secondItem="H7Q-fv-DxY" secondAttribute="bottom" constant="14.5" id="wTA-XB-gkz"/>
+                                                <constraint firstItem="4c0-XL-4JJ" firstAttribute="height" secondItem="H7Q-fv-DxY" secondAttribute="height" multiplier="1.06494" id="znA-GO-HOK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameLabel" destination="H7Q-fv-DxY" id="dgP-L1-BGs"/>
+                                            <outlet property="dateOfBirthLabel" destination="EHn-tn-ro4" id="VHP-Ll-3xL"/>
+                                            <outlet property="initialsLabel" destination="H7Q-fv-DxY" id="N0D-yd-SD2"/>
+                                            <outlet property="nameLabel" destination="DZW-NO-vWg" id="GvQ-HD-JE3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

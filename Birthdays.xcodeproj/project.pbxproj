@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		D13E47F828CF552700C4CB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47F728CF552700C4CB23 /* AppDelegate.swift */; };
 		D13E47FA28CF552700C4CB23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47F928CF552700C4CB23 /* SceneDelegate.swift */; };
-		D13E47FC28CF552700C4CB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47FB28CF552700C4CB23 /* ViewController.swift */; };
+		D13E47FC28CF552700C4CB23 /* BirthdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */; };
 		D13E47FF28CF552700C4CB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13E47FD28CF552700C4CB23 /* Main.storyboard */; };
 		D13E480128CF552900C4CB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13E480028CF552900C4CB23 /* Assets.xcassets */; };
 		D13E480428CF552900C4CB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13E480228CF552900C4CB23 /* LaunchScreen.storyboard */; };
 		D13E480F28CF552A00C4CB23 /* BirthdaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E480E28CF552A00C4CB23 /* BirthdaysTests.swift */; };
 		D13E481A28CF552A00C4CB23 /* BirthdaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E481928CF552A00C4CB23 /* BirthdaysUITests.swift */; };
 		D13E482828CF872F00C4CB23 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E482728CF872F00C4CB23 /* Person.swift */; };
-		D13E482E28CF888900C4CB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47FB28CF552700C4CB23 /* ViewController.swift */; };
+		D13E482E28CF888900C4CB23 /* BirthdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */; };
+		D13E483028CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */; };
+		D13E483128CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */; };
+		D13E483328CFA17300C4CB23 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483228CFA17300C4CB23 /* BirthdayCell.swift */; };
+		D13E483428CFA17300C4CB23 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483228CFA17300C4CB23 /* BirthdayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,7 @@
 		D13E47F428CF552700C4CB23 /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13E47F728CF552700C4CB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D13E47F928CF552700C4CB23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D13E47FB28CF552700C4CB23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysViewController.swift; sourceTree = "<group>"; };
 		D13E47FE28CF552700C4CB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D13E480028CF552900C4CB23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D13E480328CF552900C4CB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		D13E481928CF552A00C4CB23 /* BirthdaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysUITests.swift; sourceTree = "<group>"; };
 		D13E481B28CF552A00C4CB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13E482728CF872F00C4CB23 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysViewModel.swift; sourceTree = "<group>"; };
+		D13E483228CFA17300C4CB23 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +139,9 @@
 		D13E482A28CF874700C4CB23 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D13E47FB28CF552700C4CB23 /* ViewController.swift */,
+				D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */,
+				D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */,
+				D13E483228CFA17300C4CB23 /* BirthdayCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -286,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13E47FC28CF552700C4CB23 /* ViewController.swift in Sources */,
+				D13E47FC28CF552700C4CB23 /* BirthdaysViewController.swift in Sources */,
 				D13E47F828CF552700C4CB23 /* AppDelegate.swift in Sources */,
+				D13E483328CFA17300C4CB23 /* BirthdayCell.swift in Sources */,
+				D13E483028CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */,
 				D13E482828CF872F00C4CB23 /* Person.swift in Sources */,
 				D13E47FA28CF552700C4CB23 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13E482E28CF888900C4CB23 /* ViewController.swift in Sources */,
+				D13E483428CFA17300C4CB23 /* BirthdayCell.swift in Sources */,
+				D13E482E28CF888900C4CB23 /* BirthdaysViewController.swift in Sources */,
 				D13E480F28CF552A00C4CB23 /* BirthdaysTests.swift in Sources */,
+				D13E483128CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

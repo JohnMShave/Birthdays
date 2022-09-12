@@ -31,29 +31,7 @@ extension BirthdaysViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BirthdayCell") as? BirthdayCell else {
             return UITableViewCell()
         }
-        cell.configure(initials: person.initials, name: person.fullName, dateOfBirth: person.dateOfBirth?.description ?? "")
+        cell.configure(initials: person.initials, name: person.fullName, dateOfBirth: person.dateOfBirth)
         return cell
     }
 }
-
-class BirthdaysViewModel {
-    private(set) var persons: [Person]
-    
-    init() {
-        let person = Person(firstName: "John", lastName: "Shave", dateOfBirth: Date(), age: 20)
-        persons = Array<Person>(repeating: person, count: 300)
-    }
-}
-
-class BirthdayCell: UITableViewCell {
-    private var initials: String = ""
-    @IBOutlet private weak var nameLabel: UILabel!
-    private var dateOfBirth: String = ""
-    
-    func configure(initials: String, name: String, dateOfBirth: String) {
-        self.initials = initials
-        self.nameLabel.text = name
-        self.dateOfBirth = dateOfBirth
-    }
-}
-
