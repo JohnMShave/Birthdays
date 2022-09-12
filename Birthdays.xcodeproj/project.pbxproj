@@ -21,6 +21,10 @@
 		D13E483128CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */; };
 		D13E483328CFA17300C4CB23 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483228CFA17300C4CB23 /* BirthdayCell.swift */; };
 		D13E483428CFA17300C4CB23 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483228CFA17300C4CB23 /* BirthdayCell.swift */; };
+		D13E483628CFA5FE00C4CB23 /* NetworkBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483528CFA5FE00C4CB23 /* NetworkBirthday.swift */; };
+		D13E483728CFA5FE00C4CB23 /* NetworkBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483528CFA5FE00C4CB23 /* NetworkBirthday.swift */; };
+		D13E483B28CFBA6B00C4CB23 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483A28CFBA6B00C4CB23 /* BirthdayViewController.swift */; };
+		D13E483C28CFBA6B00C4CB23 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E483A28CFBA6B00C4CB23 /* BirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		D13E482728CF872F00C4CB23 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
 		D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysViewModel.swift; sourceTree = "<group>"; };
 		D13E483228CFA17300C4CB23 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
+		D13E483528CFA5FE00C4CB23 /* NetworkBirthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBirthday.swift; sourceTree = "<group>"; };
+		D13E483A28CFBA6B00C4CB23 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,7 @@
 		D13E47F628CF552700C4CB23 /* Birthdays */ = {
 			isa = PBXGroup;
 			children = (
-				D13E482B28CF877B00C4CB23 /* Models */,
+				D13E482B28CF877B00C4CB23 /* APIModels */,
 				D13E482A28CF874700C4CB23 /* Screens */,
 				D13E482C28CF87A200C4CB23 /* Resources */,
 				D13E47F728CF552700C4CB23 /* AppDelegate.swift */,
@@ -139,19 +145,18 @@
 		D13E482A28CF874700C4CB23 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */,
-				D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */,
-				D13E483228CFA17300C4CB23 /* BirthdayCell.swift */,
+				D13E483928CFBA5100C4CB23 /* Birthday */,
+				D13E483828CFBA3A00C4CB23 /* Birthdays */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		D13E482B28CF877B00C4CB23 /* Models */ = {
+		D13E482B28CF877B00C4CB23 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
-				D13E482728CF872F00C4CB23 /* Birthday.swift */,
+				D13E483528CFA5FE00C4CB23 /* NetworkBirthday.swift */,
 			);
-			path = Models;
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 		D13E482C28CF87A200C4CB23 /* Resources */ = {
@@ -162,6 +167,25 @@
 				D13E480028CF552900C4CB23 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D13E483828CFBA3A00C4CB23 /* Birthdays */ = {
+			isa = PBXGroup;
+			children = (
+				D13E47FB28CF552700C4CB23 /* BirthdaysViewController.swift */,
+				D13E482F28CFA14A00C4CB23 /* BirthdaysViewModel.swift */,
+				D13E483228CFA17300C4CB23 /* BirthdayCell.swift */,
+				D13E482728CF872F00C4CB23 /* Birthday.swift */,
+			);
+			path = Birthdays;
+			sourceTree = "<group>";
+		};
+		D13E483928CFBA5100C4CB23 /* Birthday */ = {
+			isa = PBXGroup;
+			children = (
+				D13E483A28CFBA6B00C4CB23 /* BirthdayViewController.swift */,
+			);
+			path = Birthday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +322,8 @@
 				D13E47F828CF552700C4CB23 /* AppDelegate.swift in Sources */,
 				D13E483328CFA17300C4CB23 /* BirthdayCell.swift in Sources */,
 				D13E483028CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */,
+				D13E483628CFA5FE00C4CB23 /* NetworkBirthday.swift in Sources */,
+				D13E483B28CFBA6B00C4CB23 /* BirthdayViewController.swift in Sources */,
 				D13E482828CF872F00C4CB23 /* Birthday.swift in Sources */,
 				D13E47FA28CF552700C4CB23 /* SceneDelegate.swift in Sources */,
 			);
@@ -309,8 +335,10 @@
 			files = (
 				D13E483428CFA17300C4CB23 /* BirthdayCell.swift in Sources */,
 				D13E482E28CF888900C4CB23 /* BirthdaysViewController.swift in Sources */,
+				D13E483728CFA5FE00C4CB23 /* NetworkBirthday.swift in Sources */,
 				D13E480F28CF552A00C4CB23 /* BirthdaysTests.swift in Sources */,
 				D13E483128CFA14A00C4CB23 /* BirthdaysViewModel.swift in Sources */,
+				D13E483C28CFBA6B00C4CB23 /* BirthdayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
