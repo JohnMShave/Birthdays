@@ -7,39 +7,43 @@
 
 import UIKit
 
-class BirthdaysViewController: UIViewController {
+class BirthdaysListViewController: UIViewController {
     
-    var viewModel = BirthdaysViewModel()
+    var viewModel = BirthdaysListViewModel()
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.fetchBirthdays { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success():
-                    self?.tableView.reloadData()
-                case .failure(let error):
-                    var errorMessage: String
-                    switch error {
-                    case .badURL:
-                        errorMessage = "Bad url"
-                    case .invalidDataReturned:
-                        errorMessage = "Bad data returned"
-                    }
-                    let alert = UIAlertController(title: "Network error", message: errorMessage, preferredStyle: .alert)
-                    let actionOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(actionOk)
-                    
-                    self?.present(alert, animated: false, completion: nil)
+        fetchBirthdays()
+    }
+    
+    private func fetchBirthdays() {
+        viewModel.fetchBirthdays { [weak self] success in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                guard success else {
+                    let alert = UIAlertController(title: "Network error", message: "Network Error", preferredStyle: .alert)
+                    let actionRetry = UIAlertAction(
+                        title: "Retry",
+                        style: .default,
+                        handler: { [weak self] _ in
+                            self?.fetchBirthdays()
+                        }
+                    )
+                    alert.addAction(actionRetry)
+
+                    self.present(alert, animated: false, completion: nil)
+                    return
                 }
+                
+                self.tableView.reloadData()
             }
         }
     }
 }
 
-extension BirthdaysViewController: UITableViewDelegate {
+extension BirthdaysListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -49,7 +53,7 @@ extension BirthdaysViewController: UITableViewDelegate {
     }
 }
 
-extension BirthdaysViewController: UITableViewDataSource {
+extension BirthdaysListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.birthdays.count
     }

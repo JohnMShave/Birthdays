@@ -13,7 +13,8 @@ class BirthdayViewController: UIViewController {
     @IBOutlet weak var initialsLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-
+    @IBOutlet weak var goBackButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,25 +22,23 @@ class BirthdayViewController: UIViewController {
             goBackTapped()
             return
         }
+
+        initialsLabel.text = viewModel.initials
+        nameLabel.text = viewModel.name
+        ageLabel.text = viewModel.age
         
-        self.initialsLabel.text = viewModel.initials
-        self.nameLabel.text = viewModel.name
-        self.ageLabel.text = viewModel.age
+        applyStyling()
+    }
+
+    private func applyStyling() {
+        initialsLabel.layer.cornerRadius = 50
+        initialsLabel.clipsToBounds = true
+        
+        goBackButton.layer.cornerRadius = 6
+        goBackButton.clipsToBounds = true
     }
     
     @IBAction func goBackTapped() {
         dismiss(animated: true, completion: nil)
-    }
-}
-
-class BirthdayViewModel {
-    let initials: String
-    let name: String
-    let age: String
-    
-    init(birthday: Birthday) {
-        self.initials = birthday.initials
-        self.name = birthday.fullName
-        self.age = (birthday.age != nil) ? "\(birthday.age)" : "Unknown"
     }
 }

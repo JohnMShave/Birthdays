@@ -17,15 +17,15 @@ struct ApiBirthdays: Codable {
 struct ApiBirthday: Codable {
     var name: Name
     var dob: DateOfBirth
-    
-    struct Name: Codable {
-        let title: String
-        let first: String
-        let last: String
-    }
+}
 
-    struct DateOfBirth: Codable {
-        let date: String
-        let age: Int
-    }
+struct Name: Codable {
+    let title: String
+    let first: String
+    let last: String
+}
+
+struct DateOfBirth: Codable {
+    let date: String
+    let age: Int
 }
